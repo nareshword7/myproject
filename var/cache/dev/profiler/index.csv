@@ -1,0 +1,14 @@
+bd223b,127.0.0.1,GET,http://localhost:8000/,1536846220,,404
+c31e88,127.0.0.1,GET,http://localhost:8000/favicon.ico,1536846220,aa172d,200
+aa172d,127.0.0.1,GET,http://localhost:8000/favicon.ico,1536846220,,404
+33dcb6,127.0.0.1,GET,http://localhost:8000/,1536847850,,404
+f5fd59,127.0.0.1,GET,http://localhost:8000/favicon.ico,1536847852,e425be,200
+e425be,127.0.0.1,GET,http://localhost:8000/favicon.ico,1536847852,,404
+3200f1,127.0.0.1,GET,http://localhost:8000/project/master,1536847857,,200
+73539a,127.0.0.1,GET,http://localhost:8000/project/master,1536848047,,301
+79dc54,127.0.0.1,GET,http://localhost:8000/project/master/,1536848049,,200
+d9fe7a,127.0.0.1,GET,http://localhost:8000/project/master/new,1536848052,,200
+3822d1,127.0.0.1,POST,http://localhost:8000/project/master/new,1536848116,,302
+71ad4b,127.0.0.1,GET,http://localhost:8000/project/master/,1536848116,,200
+d65d7b,127.0.0.1,GET,http://localhost:8000/project/master/1,1536848120,,200
+4b1688,127.0.0.1,GET,http://localhost:8000/project/master/,1536848122,,200
