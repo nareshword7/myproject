@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProjectMaster{% endblock %}
+
+{% block body %}
+    <h1>ProjectMaster</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ project_master.id }}</td>
+            </tr>
+            <tr>
+                <th>ProjectName</th>
+                <td>{{ project_master.ProjectName }}</td>
+            </tr>
+            <tr>
+                <th>StartingDate</th>
+                <td>{{ project_master.StartingDate ? project_master.StartingDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>CompletionDate</th>
+                <td>{{ project_master.CompletionDate ? project_master.CompletionDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Remarks</th>
+                <td>{{ project_master.Remarks }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('project_master_index') }}">back to list</a>
+
+    <a href="{{ path('project_master_edit', {'id': project_master.id}) }}">edit</a>
+
+    {{ include('project_master/_delete_form.html.twig') }}
+{% endblock %}

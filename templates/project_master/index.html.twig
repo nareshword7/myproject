@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProjectMaster index{% endblock %}
+
+{% block body %}
+    <h1>ProjectMaster index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>ProjectName</th>
+                <th>StartingDate</th>
+                <th>CompletionDate</th>
+                <th>Remarks</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for project_master in project_masters %}
+            <tr>
+                <td>{{ project_master.id }}</td>
+                <td>{{ project_master.ProjectName }}</td>
+                <td>{{ project_master.StartingDate ? project_master.StartingDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ project_master.CompletionDate ? project_master.CompletionDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ project_master.Remarks }}</td>
+                <td>
+                    <a href="{{ path('project_master_show', {'id': project_master.id}) }}">show</a>
+                    <a href="{{ path('project_master_edit', {'id': project_master.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('project_master_new') }}">Create new</a>
+{% endblock %}
